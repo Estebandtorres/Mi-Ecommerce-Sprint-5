@@ -4,7 +4,6 @@ import { NavLink, Link } from 'react-router-dom';
 const MainMenu = ({ isOpen, toggleSidebar, closeMenu }) => {
     return (
         <>
-            
             {isOpen && <div className="overlay" onClick={closeMenu}></div>}
 
             <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
@@ -16,7 +15,6 @@ const MainMenu = ({ isOpen, toggleSidebar, closeMenu }) => {
                     <button className="close-btn d-mobile" onClick={toggleSidebar}>✖</button>
                 </div>
 
-                
                 <nav className="sidebar-nav">
                     <NavLink
                         to="/"
@@ -25,6 +23,7 @@ const MainMenu = ({ isOpen, toggleSidebar, closeMenu }) => {
                     >
                         🏠 Inicio
                     </NavLink>
+                    
                     <NavLink
                         to="/products"
                         className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}
@@ -32,13 +31,22 @@ const MainMenu = ({ isOpen, toggleSidebar, closeMenu }) => {
                     >
                         📦 Productos
                     </NavLink>
-                    
+
                     <NavLink
                         to="/categories"
                         className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}
                         onClick={closeMenu}
                     >
                         🗂️ Categorías
+                    </NavLink>
+
+                    {/* Opción de Usuarios integrada */}
+                    <NavLink
+                        to="/users"
+                        className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}
+                        onClick={closeMenu}
+                    >
+                        👥 Usuarios
                     </NavLink>
                 </nav>
 

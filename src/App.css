@@ -107,7 +107,6 @@
   color: white;
 }
 
-/* ESTILOS GENERALES */
 body {
   background-color: #121212;
   font-family: Arial, sans-serif;
@@ -116,20 +115,15 @@ body {
   padding: 0;
 }
 
-/* CONTENEDOR PRINCIPAL */
 .contenedor {
   display: flex;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
   margin-left: 220px;
-  /* espacio para video lateral izquierdo */
   margin-right: 220px;
-  /* espacio para video lateral derecho */
   padding-top: 2rem;
 }
-
-/* TARJETAS DE PRODUCTOS */
 .tarjeta {
   background-color: #1e1e1e;
   border-radius: 12px;
@@ -182,7 +176,6 @@ h3 {
 }
 
 
-/* ANIMACIÓN BORDE RGB */
 @keyframes borde-rgb {
   0% {
     border-image-source: linear-gradient(0deg, red, orange, yellow, green, blue, indigo, violet);
@@ -205,7 +198,6 @@ h3 {
   }
 }
 
-/* VIDEOS LATERALES */
 .anuncio {
   position: fixed;
   top: 0;
@@ -229,7 +221,6 @@ h3 {
   right: 0;
 }
 
-/* RESPONSIVE: OCULTAR VIDEOS EN MÓVIL */
 @media (max-width: 768px) {
 
   .anuncio {
@@ -291,19 +282,14 @@ h3 {
   color: #fff;
 }
 
-/* =========================================
-   NUEVO LAYOUT: SIDEBAR Y MAIN AREA
-========================================= */
-
 .app-layout {
   display: flex;
   min-height: 100vh;
   background-color: #121212;
-  /* Mantiene tu fondo oscuro */
+  
   width: 100%;
 }
 
-/* --- SIDEBAR --- */
 .sidebar {
   width: 296px;
   background-color: #000000;
@@ -315,7 +301,6 @@ h3 {
   box-sizing: border-box;
   z-index: 1000;
   transition: left 0.3s ease-in-out;
-  /* Aplicamos tu borde RGB animado al borde derecho del menú */
   border-right: 3px solid;
   border-image: linear-gradient(45deg, red, yellow, lime, cyan, blue, magenta, red) 1;
   animation: borde-rgb 5s linear infinite;
@@ -352,7 +337,6 @@ h3 {
 .sidebar-nav a:hover {
   background-color: #1e1e1e;
   border-left: 4px solid red;
-  /* Toque visual al pasar el mouse */
 }
 
 .sidebar-footer {
@@ -376,21 +360,17 @@ h3 {
   padding: 5px;
 }
 
-/* --- MAIN AREA --- */
 .main-area {
   flex-grow: 1;
   width: calc(100% - 296px);
   display: flex;
   flex-direction: column;
   height: 100vh;
-  /* Ocupa exactamente el 100% del alto de la pantalla */
   overflow: hidden;
-  /* Evita scroll en toda la página, se lo daremos solo al contenido */
 }
 
 .main-header {
   height: 72px;
-  /* Requisito exacto de la User Story */
   min-height: 72px;
   width: 100%;
   background-color: #000000;
@@ -400,7 +380,6 @@ h3 {
   padding: 0 20px;
   box-sizing: border-box;
   flex-shrink: 0;
-  /* Evita que el header se aplaste si el contenido crece */
 }
 
 .header-title {
@@ -412,12 +391,10 @@ h3 {
 
 .content-area {
   height: calc(100vh - 72px);
-  /* Toma el alto total menos los 72px del Header */
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
-  /* Permite desplazamiento vertical SOLO aquí si excede el viewport */
 }
 
 .menu-btn {
@@ -452,31 +429,24 @@ h3 {
   .sidebar {
     position: fixed;
     left: -296px;
-    /* Oculto por defecto */
   }
 
   .sidebar.open {
     left: 0;
-    /* Visible cuando se activa */
   }
 
   .main-area {
     width: 100%;
-    /* Toma todo el ancho disponible */
   }
 
-  /* Mostrar los botones de control del menú */
   .d-mobile {
     display: block;
   }
 
   .main-header .d-mobile {
     margin-right: 15px;
-    /* Separación entre el botón y el título */
   }
 
-
-  /* Fondo oscuro semitransparente para resaltar el menú sobre el Main Area */
   .overlay {
     display: block;
     position: fixed;
@@ -489,7 +459,6 @@ h3 {
   }
 }
 
-/* --- ESTILOS DE RUTAS ACTIVAS --- */
 .sidebar-nav .nav-item {
   color: #ffffff;
   text-decoration: none;
@@ -498,12 +467,9 @@ h3 {
   transition: all 0.2s;
   display: block;
   margin: 5px 15px;
-  /* Margen para que el fondo gris no toque los bordes */
   border-radius: 8px;
-  /* Bordes redondeados estilo botón */
 }
 
-/* Estado hover general */
 .sidebar-nav .nav-item:hover {
   background-color: #1e1e1e;
 }
@@ -511,13 +477,10 @@ h3 {
 
 .sidebar-nav .nav-item.active {
   background-color: #333333;
-  /* Fondo gris claro */
   border-left: 4px solid red;
-  /* Indicador visual izquierdo */
   font-weight: bold;
 }
 
-/* Estado activo para el perfil */
 .sidebar-footer .perfil-link {
   padding: 10px 15px;
   border-radius: 8px;

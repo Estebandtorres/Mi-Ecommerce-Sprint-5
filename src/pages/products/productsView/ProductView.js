@@ -113,8 +113,6 @@ const ProductView = () => {
       console.error('Error al guardar:', error);
     }
   };
-
-  // Función corregida para manejar la eliminación
   const manejarEliminar = async () => {
     const confirmar = window.confirm("¿Estás seguro de que deseas eliminar este producto?");
     if (!confirmar) return;

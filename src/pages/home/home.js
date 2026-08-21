@@ -50,37 +50,8 @@ function Home() {
           </div>
         </section>
 
-        <section className="dashboard-module">
-          <div className="module-header">
-            <span className="module-icon">🏷️</span>
-            <h2>Categorías</h2>
-          </div>
-          
-          <div className="module-kpi">
-            <span className="kpi-number">{statsData.totalCategories}</span>
-            <span className="kpi-label">Categorías registradas</span>
-          </div>
-          
-          <div className="module-actions">
-            <Link to="/categories" className="action-btn secondary">
-              Ver Listado
-            </Link>
-            <Link to="/categories/new" className="action-btn primary">
-              Agregar Categoría
-            </Link>
-          </div>
-        </section>
+        
       </div>
-
-      <section className="charts-section">
-        <h2>Estadísticas Generales</h2>
-        <div className="chart-placeholder">
-          <div className="chart-skeleton">
-            <p>📊 Espacio reservado para futuros gráficos y métricas</p>
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 }

@@ -59,7 +59,7 @@
   color: #a0a0a0;
 }
 
-/* Agregado el "select" para que comparta los estilos del input */
+
 .form-group input, 
 .form-group textarea,
 .form-group select {
@@ -81,7 +81,6 @@
   border-color: #ff2b2b;
 }
 
-/* Estilo específico para el input de tipo archivo */
 .form-group input[type="file"] {
   padding: 8px 12px;
   cursor: pointer;
@@ -171,7 +170,7 @@
   border-top: 1px solid #2f2f2f;
 }
 
-/* Clases nuevas para controlar la vista previa de la imagen */
+
 .image-preview-container {
   margin-bottom: 15px;
   display: flex;

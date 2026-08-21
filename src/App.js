@@ -1,10 +1,12 @@
-import React, { useState } from 'react'; ////el useState sirve para que la aplicación tenga "memoria"
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';////es como un gps permite navegar entre diferentes páginas sin que la web entera tenga que recargarse.
+import React, { useState } from 'react'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import MainMenu from './components/MainMenu/MainMenu';
 
 import Home from './pages/home/home.js';
+import UserList from './components/UserList';
+import UserForm from './components/UserForm';
 import ProductsList from './pages/products/ProductList/ProductList.js';
 import ProductView from './pages/products/productsView/ProductView.js';
 import ProductNew from './pages/products/ProductNew/ProductNew.js';
@@ -45,6 +47,9 @@ function App() {
 
           <div className="content-area">
             <Routes>
+                  <Route path="/users" element={<UserList />} />
+                  <Route path="/users/new" element={<UserForm />} />
+                  <Route path="/users/edit/:id" element={<UserForm />} />
                   <Route path="/" element={<Home />} />
                   <Route path="/products" element={<ProductsList />} />
                   <Route path="/products/new" element={<ProductNew />} />

@@ -27,7 +27,7 @@
 }
 
 .dashboard-module {
-  background-color: #1e1e1e; /* Color de tus tarjetas de producto */
+  background-color: #1e1e1e;
   border: 1px solid #333;
   border-radius: 12px;
   padding: 24px;
@@ -101,7 +101,7 @@
 }
 
 .action-btn.primary {
-  background-color: #ff2b2b; /* Botón primario rojo */
+  background-color: #ff2b2b;
   color: white;
   border: none;
 }
